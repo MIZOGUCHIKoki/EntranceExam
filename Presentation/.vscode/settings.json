@@ -1,0 +1,51 @@
+{
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "uplatex-dvipdfmx",
+            "tools": [
+                "uplatex",
+                "uplatex",
+                "dvipdfmx"
+            ]
+        },
+        {
+            "name": "uplatex-biber-dvipdfmx",
+            "tools": [
+                "uplatex",
+                "biber",
+                "uplatex",
+                "uplatex",
+                "dvipdfmx"
+            ]
+        },
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "name": "uplatex",
+            "command": "uplatex",
+            "args": [
+                "--cmdx",
+                "-file-line-error",
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-halt-on-error",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "dvipdfmx",
+            "command": "dvipdfmx",
+            "args": [
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "biber",
+            "command": "biber",
+            "args": [
+                "%DOCFILE%"
+            ],
+            "env": {}
+        },
+    ],
+}

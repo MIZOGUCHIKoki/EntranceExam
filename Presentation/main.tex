@@ -1,0 +1,72 @@
+\documentclass[dvipdfmx,aspectratio=43]{beamer}
+
+% Tabular settings
+\usepackage{tabularx,multirow}
+\renewcommand{\arraystretch}{1.5}
+\newcolumntype{C}{>?{\centering\arraybackslash}X}
+\newcolumntype{R}{>?{\raggetright\arraybackslash}X}
+\newcolumntype{L}{>?{\raggedleft\arraybackslash}X}
+
+% Hyperref setting
+\usepackage{hyperref}
+\hypersetup{colorlinks=false}
+
+% Margin setting
+\setbeamertemplate{text margin left=2mm,text margin right=2mm}
+
+% Beamer settings
+\usetheme{Montpellier}
+\usecolortheme[RGB={140,0,0}]{structure}
+\setbeamertemplate{navigation symbols}{}
+
+% Beamer color box settings
+\setbeamercolor{block title}{bg=black, fg=white}
+\setbeamercolor{block body}{bg=black!10, fg=black}
+\setbeamercolor{block title alerted}{bg=red!70!black, fg=white}
+\setbeamercolor{block body alerted}{bg=red!10, fg=black}
+\setbeamercolor{block title example}{bg=green!70!black, fg=white}
+\setbeamercolor{block body example}{bg=green!10, fg=black}
+
+% Font settings
+\renewcommand{\familydefault}{\rmdefault}
+\usefonttheme{professionalfonts}
+
+% Caption and footnote settings
+\setbeamertemplate{caption}[numbered]
+\renewcommand{\figurename}{図}
+\renewcommand{\tablename}{表}
+\renewcommand{\thefootnote}{\arabic{footnote})}
+\renewcommand{\thempfootnote}{\arabic{footnote})}
+
+% Biber settings
+\usepackage[sorting=none,backend=biber,sortcites=true,backref=true]{biblatex}
+\addbibresource{ref.bib}
+\setbeamertemplate{bibliography item}[text]
+
+% other settings
+\makeatletter
+\@addtoreset{footnote}{page}
+\makeatother
+
+% Footer settings
+\setbeamertemplate{footline}{
+    \leavevmode
+    \hbox{\begin{beamercolorbox}[wd=.48\paperwidth, ht=1.3ex, left, dp=1.5ex, leftskip=2mm]{bg=black, fg=white}
+        {\color{gray!30}\insertshortauthor{} (\insertshortinstitute)}\end{beamercolorbox}
+        \begin{beamercolorbox}[wd=.5\paperwidth, ht=1.3ex, right, dp=1.5ex, rightskip=0mm]{structure}
+        \insertframenumber{} / \inserttotalframenumber\end{beamercolorbox}}
+}
+
+% Frame title settings
+\newcommand{\ft}{\thesection.\thesubsection\ \subsecname}
+\newcommand{\fft}{\thesection.\ \secname}
+
+\title{2024年度 総合研究大学院大学 情報学コース 入学試験}
+\author[K.MIZOGUCHI]{溝口 洸熙}
+\institute[KUT]{高知工科大学 情報学群 4年 情報セキュリティシステム研究室}
+\date{August 2024 ＜国立情報学研究所＞}
+\begin{document}
+\maketitle
+\input{research.tex}
+\input{plan.tex}
+\end{document}
